@@ -24,7 +24,7 @@ You can add a workspace as a volume directory with the argument *-v /your-path/w
 Get the latest version from github
 
     git clone https://github.com/eea/eea.docker.cloud9
-    cd cloud9-docker/
+    cd cloud9/
 
 Build it
 
