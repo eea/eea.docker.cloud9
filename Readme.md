@@ -19,9 +19,9 @@ This repository contains Dockerfile of Cloud9 IDE for Docker's automated build p
 
     docker run -it -d -p 8080:8080 eeacms/cloud9
     
-You can add a workspace as a volume directory with the argument *-v /your-path/workspace/:/workspace/* like this :
+You can add a workspace as a volume directory with the argument *-v /your-path/workspace/:/cloud9/workspace/* like this :
 
-    docker run -it -d -p 8080:8080 -v /your-path/workspace/:/workspace/ eeacms/cloud9
+    docker run -it -d -p 8080:8080 -v /your-path/workspace/:/cloud9/workspace/ eeacms/cloud9
     
 ## Build and run with custom config directory
 
@@ -36,7 +36,7 @@ Build it
     
 And run
 
-    docker run -d -p 8080:8080 -v /your-path/workspace/:/workspace/ $USER/cloud9:latest
+    docker run -d -p 8080:8080 -v /your-path/workspace/:/cloud9/workspace/ $USER/cloud9:latest
    
 ## Advance Usage
 
