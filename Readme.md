@@ -8,7 +8,7 @@ This repository contains Dockerfile of Cloud9 IDE for Docker's automated build p
 
 ## Features
 
-- Custom container workspace directory with C9_WORKSPACE var (make it easier to link with VOLUME_FROM other container, not just host directory mapping).
+- Custom container workspace directory by ```C9_WORKSPACE``` var (make it easier to link with VOLUME_FROM other container, not just host directory mapping).
 
 ## Installation
 
