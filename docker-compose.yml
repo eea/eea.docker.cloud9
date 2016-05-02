@@ -1,0 +1,6 @@
+ide:
+  image: .
+  volumes:
+    - /data/workspace:/cloud9/workspace
+  ports:
+    - 8080:8080
