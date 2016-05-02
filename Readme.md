@@ -6,6 +6,9 @@ This repository contains Dockerfile of Cloud9 IDE for Docker's automated build p
 
 - [hub.docker.com](https://registry.hub.docker.com/u/eeacms/cloud9)
 
+## Features
+
+- Custom container workspace directory with C9_WORKSPACE var (make it easier to link with VOLUME_FROM other container, not just host directory mapping).
 
 ## Installation
 
@@ -37,6 +40,8 @@ And run
    
 ## Advance Usage
 
+### Run the latest cloud9 sdk version
+
 Get the latest version from github
 
     git clone https://github.com/eea/eea.docker.cloud9
@@ -53,12 +58,33 @@ Example docker-compose.yml:
       volumes_from:
         - data
       ports:
-        - 8080:8080
+        - 8081:8080
+      environment:
+	- C9_WORKSPACE=/data/workspace
     data:
-      image: alpine
+      image: busybox
       volumes:
         - /data/workspace
 
+
+### Add cloud9 to edit your app files
+    
+    webapp:
+      image: nginx
+      volumes_from:
+        - data
+    ide:
+      image: eeacms/cloud9
+      volumes_from:
+        - data
+      ports:
+        - 8081:8080
+      environment:
+        - C9_WORKSPACE=/var/www/httpd
+    data:
+      image: busybox
+      volumes:
+        - /var/www/httpd
 
 It will set the parameters to:
 

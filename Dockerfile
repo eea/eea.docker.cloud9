@@ -25,8 +25,12 @@ RUN git clone https://github.com/c9/core.git . \
 VOLUME /cloud9/workspace
 
 # ------------------------------------------------------------------------------
+# Set default workspace dir
+ENV C9_WORKSPACE /cloud9/workspace
+
+# ------------------------------------------------------------------------------
 # Configuration
-COPY conf/chaperone.conf /etc/chaperone.d/chaperone.conf
+ADD conf/chaperone.conf /etc/chaperone.d/
 
 # ------------------------------------------------------------------------------
 # Expose ports.

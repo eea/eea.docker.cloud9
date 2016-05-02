@@ -1,6 +1,8 @@
 ide:
-  image: .
+  image: eeacms/cloud9
+  environment:
+    - C9_WORKSPACE=/data/workspace
   volumes:
-    - /data/workspace:/cloud9/workspace
+    - /path/your/data/:/data/workspace:z
   ports:
     - 8080:8080
