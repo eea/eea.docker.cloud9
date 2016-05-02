@@ -1,8 +1,8 @@
 ide:
-  build: .
+  image: eeacms/cloud9
   environment:
-    - C9_WORKSPACE=/data/workspace
+    - C9_WORKSPACE=/var/local/deploy
   volumes:
-    - /path/your/data/:/data/workspace:z
+    - /var/local/deploy:/var/local/deploy:z
   ports:
-    - 8080:8080
+    - 8081:8080
