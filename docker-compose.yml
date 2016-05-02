@@ -1,5 +1,5 @@
 ide:
-  image: eeacms/cloud9
+  build: .
   environment:
     - C9_WORKSPACE=/data/workspace
   volumes:
