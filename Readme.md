@@ -39,7 +39,7 @@ And run
 
     docker run -d -p 8080:8080 -v /your-path/workspace/:/cloud9/workspace/ $USER/cloud9:latest
 
-## EXTRA PARAMS
+## Extra params
 
 By ```C9_EXTRA``` it is possible define extra params to cloud9
 
@@ -47,7 +47,11 @@ By ```C9_EXTRA``` it is possible define extra params to cloud9
     --auth              Basic Auth username:password                                          
     --collab            Whether to enable collab.
     --setting-path      The path to store the settings.
-  
+
+example:
+
+    C9_EXTRA=--collab -a username:password
+
 ## Advance Usage
 
 ### Run the latest cloud9 sdk version
