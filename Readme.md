@@ -9,6 +9,7 @@ This repository contains Dockerfile of Cloud9 IDE for Docker's automated build p
 ## Features
 
 - Custom container workspace directory by ```C9_WORKSPACE``` var (make it easier to link with VOLUME_FROM other container, not just host directory mapping).
+- Define extra params to cloud9 by ```C9_EXTRA``` var. For [details](#extra-params)
 
 ## Installation
 
@@ -37,7 +38,16 @@ Build it
 And run
 
     docker run -d -p 8080:8080 -v /your-path/workspace/:/cloud9/workspace/ $USER/cloud9:latest
-   
+
+## EXTRA PARAMS
+
+By ```C9_EXTRA``` it is possible define extra params to cloud9
+
+    --readonly          Run in read only mode                                                 
+    --auth              Basic Auth username:password                                          
+    --collab            Whether to enable collab.
+    --setting-path      The path to store the settings.
+  
 ## Advance Usage
 
 ### Run the latest cloud9 sdk version
