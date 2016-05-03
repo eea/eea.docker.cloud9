@@ -4,7 +4,7 @@ This repository contains Dockerfile of Cloud9 IDE for Docker's automated build p
 
 ## Base docker image
 
-- [hub.docker.com](https://registry.hub.docker.com/u/eeacms/cloud9)
+- [hub.docker.com](https://hub.docker.com/r/eeacms/cloud9)
 
 ## Features
 
@@ -43,8 +43,8 @@ And run
 
 By ```C9_EXTRA``` it is possible define extra params to cloud9
 
-    --readonly          Run in read only mode                                                 
-    --auth              Basic Auth username:password                                          
+    --readonly          Run in read only mode
+    --auth              Basic Auth username:password
     --collab            Whether to enable collab.
 
 example:
