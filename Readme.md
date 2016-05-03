@@ -46,7 +46,6 @@ By ```C9_EXTRA``` it is possible define extra params to cloud9
     --readonly          Run in read only mode                                                 
     --auth              Basic Auth username:password                                          
     --collab            Whether to enable collab.
-    --setting-path      The path to store the settings.
 
 example:
 
